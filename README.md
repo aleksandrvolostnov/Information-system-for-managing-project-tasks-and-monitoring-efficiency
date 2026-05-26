@@ -1,123 +1,227 @@
-AtomFlow — Система управления проектами, задачами и эффективностью
-Flask + PostgreSQL + DHTMLX Gantt
-Веб-приложение для тотального контроля над проектами, задачами, корпоративным чатом и аналитикой эффективности.
-Подходит для малых и средних команд, которые хотят видеть полную картину: кто, что, когда делает и не терять коммуникацию.
+# AtomFlow
 
-Статистика проекта
-https://img.shields.io/badge/Python-3.9%252B-blue
-https://img.shields.io/badge/Flask-2.0-black
-https://img.shields.io/badge/PostgreSQL-16-4169E1
-https://img.shields.io/badge/DHTMLX%2520Gantt-9.0-FF7F50
-https://img.shields.io/badge/Choices.js-11.0-FFB13B
+**Flask + SQLAlchemy + PostgreSQL**  
+Веб-система для управления проектами, задачами, командной работой и мониторинга эффективности сотрудников (KPI).  
+Включает чат, календарь, доску задач, диаграмму Ганта, рулетку с жетонами и ролевую модель (администратор/пользователь).
 
-https://img.shields.io/github/languages/code-size/aleksandrvolostnov/Information-system-for-managing-project-tasks-and-monitoring-efficiency
-https://img.shields.io/badge/DB-PostgreSQL-blue
-https://img.shields.io/badge/License-MIT-yellow
+---
 
-Технологический стек
-https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
-https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white
-https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white
-https://img.shields.io/badge/SQLAlchemy-CC0000?style=for-the-badge&logo=sqlalchemy&logoColor=white
-https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
-https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
-https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
-https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
+## Статистика проекта
 
-📂 Основной проект
-Проект	Описание	Стек	Ссылка
-AtomFlow	Система управления проектами и задачами с чатом, календарём, диаграммой Ганта и аналитикой эффективности	https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white https://img.shields.io/badge/JS-F7DF1E?logo=javascript&logoColor=black	GitHub
-Возможности системы
-👥 Пользователи и роли
-Регистрация / авторизация (Flask‑Login)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Flask](https://img.shields.io/badge/Flask-2.3-black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0-red)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-Разделение ролей: Администратор (полный доступ) и Пользователь
+![Code Size](https://img.shields.io/github/languages/code-size/aleksandrvolostnov/Information-system-for-managing-project-tasks-and-monitoring-efficiency)
+![Lines of Code](https://img.shields.io/tokei/lines/github/aleksandrvolostnov/Information-system-for-managing-project-tasks-and-monitoring-efficiency)
 
-📁 Проекты
-Создание проектов, приглашение участников
+---
 
-Просмотр деталей и динамики проекта
+## Технологический стек
 
-✅ Задачи
-Приоритет: Низкий / Средний / Высокий
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-CC0000?style=for-the-badge&logo=sqlalchemy&logoColor=white)
+![Flask-Login](https://img.shields.io/badge/Flask--Login-000000?style=for-the-badge&logo=flask&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)
+![OpenPyXL](https://img.shields.io/badge/OpenPyXL-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 
-Статус: Выполняется, Завершена, Просрочена и др.
+---
 
-Сложность (1–3 балла)
+## Возможности системы
 
-Дедлайн с визуальной подсветкой просрочек
+### 👥 Управление пользователями и ролями
+- Роли: **администратор** и **обычный пользователь**
+- Регистрация, авторизация, управление профилем (аватар, email, телефон)
+- Администратор: создание/удаление пользователей, смена ролей и паролей
 
-Подзадачи и зависимости между задачами
+### 📁 Проекты
+- Создание проектов с названием и описанием
+- Добавление/удаление участников проекта
+- Просмотр задач проекта в разрезе готовности, приоритета, сложности
 
-Загрузка множества файлов к каждой задаче
+### ✅ Задачи
+- Создание, редактирование, удаление задач
+- Атрибуты: название, описание, приоритет, статус, сложность, дедлайн, исполнитель
+- Привязка задач к проектам
+- Вложенные файлы (изображения, документы)
+- Комментарии к задачам (с редактированием и удалением)
+- Подзадачи (для диаграммы Ганта)
+- Автоматическая отметка просроченных задач
 
-Назначение ответственного исполнителя
+### 📊 Доска задач
+- Три представления: по **статусу** (В работе / Выполненные / Просроченные), по **приоритету**, по **сложности**
+- Drag-and-drop (перетаскивание между колонками с сохранением в БД)
 
-📅 Календарь
-Месячный просмотр всех задач
+### 📅 Календарь
+- Отображение задач на выбранный месяц
+- Подсчёт задач по приоритету и сложности
 
-Группировка по датам
+### 📈 KPI и отчёты
+- Расчёт индивидуального KPI сотрудника на основе выполненных задач (с учётом веса: сложность × приоритет)
+- Общий KPI компании
+- Экспорт отчёта в Excel (за выбранный период) – для одного сотрудника или всех (только админ)
+- Диаграмма (bar chart) в Excel
 
-Аналитика по приоритетам и сложности на выбранный период
+### 💬 Чат (личные и групповые сообщения)
+- Личные сообщения между пользователями
+- Общая групповая беседа
+- Отправка файлов
+- Ответы на сообщения (threads)
+- Пересылка сообщений
+- Отметка о прочитанном
 
-💬 Корпоративный мессенджер
-Личные и групповые чаты
+### 🔔 Напоминания
+- Создание напоминаний с датой/временем, приоритетом, повторением (нет/ежедневно/еженедельно/ежемесячно)
+- Отдельная страница со списком напоминаний
 
-Отправка текста и файлов
+### 📐 Диаграмма Ганта
+- Визуализация задач и подзадач на временной шкале
+- Добавление/редактирование/удаление подзадач через интерфейс
 
-Уведомления о непрочитанных сообщениях
+### 📎 Редактирование документов (OnlyOffice)
+- Загрузка файлов (docx, xlsx, pptx, txt)
+- Интеграция с OnlyOffice Document Server для онлайн-редактирования
 
-Ответы на сообщения и пересылка
+---
 
-📊 Дашборд и аналитика
-Виджет «3 ближайшие задачи» (самые горящие дедлайны)
+## Быстрый старт
 
-Общая статистика по приоритетам и сложности задач
+### Предварительные требования
+- Python 3.10+
+- PostgreSQL (создайте базу данных, например `efficiency_control`)
+- (опционально) OnlyOffice Document Server для редактирования документов
 
-Графики распределения нагрузки
+### Локальный запуск
 
-⏰ Напоминания
-Персональные напоминания с настройкой повторения
-
-Приоритет напоминаний
-
-📈 Диаграмма Ганта
-Визуализация проектов с помощью dhtmlx-gantt
-
-Drag‑and‑drop изменение сроков
-
-✏️ Интеграция с OnlyOffice
-Встроенный редактор документов (в коде обозначен как KM SOFT)
-
-Быстрый старт
-Локальный запуск
-bash
-# 1. Клонировать репозиторий
+```bash
+# Клонирование репозитория
 git clone https://github.com/aleksandrvolostnov/Information-system-for-managing-project-tasks-and-monitoring-efficiency.git
 cd Information-system-for-managing-project-tasks-and-monitoring-efficiency
 
-# 2. Создать и активировать виртуальное окружение
-python -m venv venv
-source venv/bin/activate      # Linux/Mac
-venv\Scripts\activate         # Windows
+# Установка зависимостей
+pip install -r requirements.txt
 
-# 3. Установить Python-зависимости
-pip install flask flask_sqlalchemy flask_login babel werkzeug openpyxl psycopg2-binary
+# Создание таблиц и заполнение начальными данными
+# Откройте psql или любой клиент PostgreSQL и выполните SQL из файла init_db.sql (приведён ниже)
 
-# 4. Установить frontend-зависимости (Choices.js, DHTMLX Gantt)
-npm install
+# Настройка подключения к БД в app.py
+# В строке: app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1111@localhost/efficiency_control'
+# Укажите свои логин/пароль/хост/имя БД
 
-# 5. Настроить PostgreSQL
-#    Создайте базу данных, например 'efficiency_control'
-#    В файле app.py измените строку подключения:
-#    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://пользователь:пароль@localhost/имя_бд'
-
-# 6. Создать таблицы в БД
-python
->>> from app import db
->>> db.create_all()
->>> exit()
-
-# 7. Запустить приложение
+# Запуск приложения
 python app.py
-Открой в браузере: http://127.0.0.1:5000
+Откройте браузер: http://127.0.0.1:5000
+
+Создание таблиц и начальных данных (SQL)
+Выполните следующие скрипты в вашей базе данных:
+-- 1. Таблица ролей
+CREATE TABLE roles (
+    id SERIAL PRIMARY KEY,
+    role_name VARCHAR(50) NOT NULL
+);
+
+-- 2. Таблица пользователей
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(150) NOT NULL,
+    role_id INTEGER REFERENCES roles(id),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    email VARCHAR(150) UNIQUE,
+    phone VARCHAR(20),
+    avatar VARCHAR(255),
+    tokens INTEGER DEFAULT 0
+);
+
+-- 3. Проекты
+CREATE TABLE projects (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    owner_id INTEGER NOT NULL REFERENCES users(id)
+);
+
+-- 4. Связь проектов и пользователей
+CREATE TABLE project_members (
+    project_id INTEGER NOT NULL REFERENCES projects(id) ON DELETE CASCADE,
+    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    PRIMARY KEY (project_id, user_id)
+);
+
+-- 5. Напоминания
+CREATE TABLE reminders (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(150) NOT NULL,
+    description TEXT,
+    reminder_date TIMESTAMP NOT NULL,
+    priority VARCHAR(50) DEFAULT 'Низкий',
+    repeat VARCHAR(50) DEFAULT 'Нет',
+    user_id INTEGER NOT NULL REFERENCES users(id)
+);
+
+-- 6. Задачи
+CREATE TABLE tasks (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(150) NOT NULL,
+    description TEXT NOT NULL,
+    priority VARCHAR(50) NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    difficulty VARCHAR(50) NOT NULL,
+    due_date TIMESTAMP NOT NULL,
+    user_id INTEGER REFERENCES users(id),
+    assigned_to_id INTEGER REFERENCES users(id),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    project_id INTEGER NOT NULL REFERENCES projects(id),
+    parent_task_id INTEGER REFERENCES tasks(id)
+);
+
+-- 7. Подзадачи
+CREATE TABLE subtasks (
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER NOT NULL REFERENCES tasks(id),
+    title VARCHAR(150) NOT NULL,
+    start_date TIMESTAMP NOT NULL,
+    end_date TIMESTAMP NOT NULL
+);
+
+-- 8. Комментарии к задачам
+CREATE TABLE task_comments (
+    id SERIAL PRIMARY KEY,
+    task_id INTEGER NOT NULL REFERENCES tasks(id),
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    comment TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 9. Файлы
+CREATE TABLE files (
+    id SERIAL PRIMARY KEY,
+    filename VARCHAR(255) NOT NULL,
+    task_id INTEGER REFERENCES tasks(id)
+);
+
+-- 10. Сообщения
+CREATE TABLE messages (
+    id SERIAL PRIMARY KEY,
+    sender_id INTEGER NOT NULL REFERENCES users(id),
+    receiver_id INTEGER REFERENCES users(id),
+    is_group BOOLEAN DEFAULT FALSE,
+    content TEXT,
+    filename VARCHAR(150),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    is_read BOOLEAN DEFAULT FALSE,
+    parent_message_id INTEGER REFERENCES messages(id)
+);
+
+-- Начальные данные
+INSERT INTO roles (role_name) VALUES ('admin'), ('user');
+
