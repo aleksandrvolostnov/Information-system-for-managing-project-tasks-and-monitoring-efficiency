@@ -110,15 +110,6 @@ pip install -r requirements.txt
 
 # Создание таблиц и заполнение начальными данными
 # Откройте psql или любой клиент PostgreSQL и выполните SQL из файла init_db.sql (приведён ниже)
-
-# Настройка подключения к БД в app.py
-# В строке: app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1111@localhost/efficiency_control'
-# Укажите свои логин/пароль/хост/имя БД
-
-# Запуск приложения
-python app.py
-Откройте браузер: http://127.0.0.1:5000
-
 Создание таблиц и начальных данных (SQL)
 Выполните следующие скрипты в вашей базе данных:
 -- 1. Таблица ролей
@@ -224,4 +215,14 @@ CREATE TABLE messages (
 
 -- Начальные данные
 INSERT INTO roles (role_name) VALUES ('admin'), ('user');
+
+
+# Настройка подключения к БД в app.py
+# В строке: app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1111@localhost/efficiency_control'
+# Укажите свои логин/пароль/хост/имя БД
+
+# Запуск приложения
+python app.py
+Откройте браузер: http://127.0.0.1:5000
+
 
